@@ -9,10 +9,6 @@ on:
     # https://docs.github.com/ja/actions/reference/workflow-syntax-for-github-actions#example-including-paths
     paths:
       - 'charts/**'
-  # for test
-  pull_request:
-    branches:
-      - main
 
 jobs:
   release:
