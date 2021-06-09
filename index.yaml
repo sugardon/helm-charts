@@ -1,0 +1,15 @@
+apiVersion: v1
+entries:
+  alpine:
+  - apiVersion: v2
+    created: "2021-06-09T13:14:06.011619145Z"
+    description: Deploy a basic Alpine Linux pod
+    digest: 268741d176ce4d0229814c515f6bb363be3d3538f96d51af3455c4d01b5c00b3
+    home: https://k8s.io/helm
+    name: alpine
+    sources:
+    - https://github.com/kubernetes/helm
+    urls:
+    - https://github.com/sugardon/helm-charts/releases/download/alpine-0.0.1/alpine-0.0.1.tgz
+    version: 0.0.1
+generated: "2021-06-09T13:14:06.011627145Z"
