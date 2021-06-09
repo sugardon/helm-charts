@@ -31,7 +31,7 @@ jobs:
 
       - name: Add repo
         run: |
-          #helm repo add sugardon https://sugardon.github.io/helm-charts/
+          helm repo add sugardon https://sugardon.github.io/helm-charts/
           helm repo add stable https://charts.helm.sh/stable
 
       - name: Run chart-releaser
