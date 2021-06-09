@@ -1,0 +1,42 @@
+# https://github.com/DataDog/helm-charts/blob/master/.github/workflows/release.yaml
+# https://github.com/argoproj/argo-helm/blob/master/.github/workflows/publish.yml
+name: Release Charts
+
+on:
+  push:
+    branches:
+      - main
+    # https://docs.github.com/ja/actions/reference/workflow-syntax-for-github-actions#example-including-paths
+    paths:
+      - 'charts/**'
+  # for test
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Install Helm
+        uses: azure/setup-helm@v1.1
+
+      - name: Configure Git
+        run: |
+          git config user.name "$GITHUB_ACTOR"
+          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+
+      - name: Add repo
+        run: |
+          #helm repo add sugardon https://sugardon.github.io/helm-charts/
+          helm repo add stable https://charts.helm.sh/stable
+
+      - name: Run chart-releaser
+        uses: helm/chart-releaser-action@v1.2.1
+        with:
+          config: "./.github/configs/cr.yaml"
+        env:
+          CR_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
