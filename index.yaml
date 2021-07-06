@@ -23,4 +23,15 @@ entries:
     urls:
     - https://github.com/sugardon/helm-charts/releases/download/alpine-0.0.1/alpine-0.0.1.tgz
     version: 0.0.1
-generated: "2021-06-09T14:09:21.549354205Z"
+  nextjs:
+  - apiVersion: v2
+    appVersion: ac627ffba67df1861a1536a4d17c7f57c9cfe7c5
+    created: "2021-07-06T16:31:54.283721893Z"
+    description: A Helm chart for Kubernetes
+    digest: 6d632f8e1d342c3c2da7a070213dcaf7649e70eab66bc12dff93d2ac70ef4647
+    name: nextjs
+    type: application
+    urls:
+    - https://github.com/sugardon/helm-charts/releases/download/nextjs-0.0.1/nextjs-0.0.1.tgz
+    version: 0.0.1
+generated: "2021-07-06T16:31:54.283731393Z"
