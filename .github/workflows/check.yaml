@@ -1,0 +1,31 @@
+---
+name: check
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  kubeval:
+    name: kubeval
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+    steps:
+      - uses: actions/checkout@v3
+      - uses: azure/setup-helm@v3
+        with:
+          version: "v3.9.2"
+      - name: setup kubeval
+        env:
+          KUBEVAL_VERSION: "v0.16.1"
+        run: |
+          wget https://github.com/instrumenta/kubeval/releases/download/${KUBEVAL_VERSION}/kubeval-linux-amd64.tar.gz
+          tar xf kubeval-linux-amd64.tar.gz
+          sudo cp kubeval /usr/local/bin
+      - name: run
+        run: |
+          ./scripts/kubeval
