@@ -9,6 +9,10 @@ on:
   workflow_dispatch:
 
 jobs:
+  # TODO: chart-testing
+  # https://github.com/helm/chart-testing
+  # chart-testing:
+
   kubeval:
     name: kubeval
     runs-on: ubuntu-latest
