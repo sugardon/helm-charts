@@ -28,4 +28,4 @@ jobs:
           sudo cp kubeval /usr/local/bin
       - name: run
         run: |
-          ./scripts/kubeval
+          ./scripts/kubeval.sh
