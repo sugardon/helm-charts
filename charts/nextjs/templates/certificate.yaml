@@ -1,4 +1,4 @@
-{{- if .Values.server.certificate.enabled -}}
+{{- if .Values.certificate.enabled -}}
 {{- if .Values.apiVersionOverrides.certmanager -}}
 apiVersion: {{ .Values.apiVersionOverrides.certmanager }}
 {{- else if .Capabilities.APIVersions.Has "cert-manager.io/v1" }}
@@ -17,7 +17,6 @@ metadata:
     {{- include "nextjs.labels" . | nindent 4 }}
 spec:
   secretName: {{ .Values.certificate.secretName | quote }}
-  commonName: {{ .Values.certificate.domain | quote }}
   dnsNames:
     - {{ .Values.certificate.domain | quote }}
   issuerRef:

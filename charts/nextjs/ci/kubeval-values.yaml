@@ -4,3 +4,7 @@ image:
 
 certificate:
   enabled: true
+  domain: "sugardon-test.com"
+  issuer:
+    kind: "ClusterIssuer"
+    name: "letsencrypt"
