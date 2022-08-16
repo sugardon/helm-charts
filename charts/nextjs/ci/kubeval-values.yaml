@@ -1,3 +1,10 @@
 image:
   repository: sugardon/sugardonblog
   tag: "latest"
+
+certificate:
+  enabled: true
+  domain: "sugardon-test.com"
+  issuer:
+    kind: "ClusterIssuer"
+    name: "letsencrypt"
