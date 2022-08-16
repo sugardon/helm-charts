@@ -80,3 +80,27 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+# Override APIVersions
+# If you want to template helm charts but cannot access k8s API server
+# you can set api versions here
+apiVersionOverrides:
+  # String to override apiVersion of certmanager resources rendered by this helm chart
+  certmanager: "" # Eg. cert-manager.io/v1
+
+## Certificate configuration (requires cert-manger)
+certificate:
+  enabled: false
+
+  # Primary domain
+  domain: sugardon.example.com
+  # The name of Secret that will automatically created and managed by this Certificate resource
+  secretName: nextjs-certificate-tls
+  # Certificate issuer
+  # Needs setup external isseuer beforehand
+  # https://cert-manager.io/docs/concepts/issuer/
+  issuer:
+    # Certificate issuer kind. Either `Issuer` or `ClusterIssuer`
+    kind: ""
+    # Certificate issuer name. Eg. `letsencrypt`
+    name: ""
