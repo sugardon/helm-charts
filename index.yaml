@@ -2,6 +2,17 @@ apiVersion: v1
 entries:
   alpine:
   - apiVersion: v2
+    created: "2022-08-16T16:18:30.33780172Z"
+    description: Deploy a basic Alpine Linux pod
+    digest: f22e16e06b00ed8467c6fc241f150985151195c3a2f0fe752a38827fdbe5b7a2
+    home: https://k8s.io/helm
+    name: alpine
+    sources:
+    - https://github.com/kubernetes/helm
+    urls:
+    - https://github.com/sugardon/helm-charts/releases/download/alpine-0.0.3/alpine-0.0.3.tgz
+    version: 0.0.3
+  - apiVersion: v2
     created: "2021-06-09T14:09:21.549347705Z"
     description: Deploy a basic Alpine Linux pod
     digest: 6e747198cc353bbd4eda802e2e66bf541e5bd0e0bc50372f5cc0c51e4127e901
@@ -26,6 +37,16 @@ entries:
   nextjs:
   - apiVersion: v2
     appVersion: ac627ffba67df1861a1536a4d17c7f57c9cfe7c5
+    created: "2022-08-16T16:18:30.519692306Z"
+    description: A Helm chart for Kubernetes
+    digest: 1f6504656d7ca1bf046ffa46354064e7679468b1456924451499d56d67f51236
+    name: nextjs
+    type: application
+    urls:
+    - https://github.com/sugardon/helm-charts/releases/download/nextjs-0.0.2/nextjs-0.0.2.tgz
+    version: 0.0.2
+  - apiVersion: v2
+    appVersion: ac627ffba67df1861a1536a4d17c7f57c9cfe7c5
     created: "2021-07-06T16:31:54.283721893Z"
     description: A Helm chart for Kubernetes
     digest: 6d632f8e1d342c3c2da7a070213dcaf7649e70eab66bc12dff93d2ac70ef4647
@@ -34,4 +55,4 @@ entries:
     urls:
     - https://github.com/sugardon/helm-charts/releases/download/nextjs-0.0.1/nextjs-0.0.1.tgz
     version: 0.0.1
-generated: "2021-07-06T16:31:54.283731393Z"
+generated: "2022-08-16T16:18:30.519704306Z"
