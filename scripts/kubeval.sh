@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -eux
+set -euox pipefail
 
 KUBERNETES_VERSION="v1.21.2"
 SCHEMA_LOCATION="https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master"
