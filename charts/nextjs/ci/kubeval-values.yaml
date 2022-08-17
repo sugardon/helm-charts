@@ -8,3 +8,7 @@ certificate:
   issuer:
     kind: "ClusterIssuer"
     name: "letsencrypt"
+
+emissaryIngress:
+  enabled: true
+  tlsSecretName: "emissary-tls"

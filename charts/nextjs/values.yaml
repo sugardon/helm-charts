@@ -104,3 +104,16 @@ certificate:
     kind: ""
     # Certificate issuer name. Eg. `letsencrypt`
     name: ""
+
+## Emissary-ingress configration (requires emissary-ingress)
+emissaryIngress:
+  enabled: false
+
+  # Primary domain
+  domain: sugardon.example.com
+  # Emissary-ingress mapping prefix. cf. https://${domain}${prefix}
+  # https://www.getambassador.io/docs/emissary/latest/topics/using/mappings/#advanced-mapping-configuration
+  prefix: "/"
+  # The secret of contain a valid TLS certificate
+  # https://www.getambassador.io/docs/emissary/latest/topics/running/tls/#transport-layer-security-tls
+  tlsSecretName: ""
