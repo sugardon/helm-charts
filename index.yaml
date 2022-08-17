@@ -37,6 +37,16 @@ entries:
   nextjs:
   - apiVersion: v2
     appVersion: ac627ffba67df1861a1536a4d17c7f57c9cfe7c5
+    created: "2022-08-17T15:29:18.027757497Z"
+    description: A Helm chart for Kubernetes
+    digest: 0fb720f812ee9b1c0ae302281767e7f06d012898e04e8baee87a820ea4928a17
+    name: nextjs
+    type: application
+    urls:
+    - https://github.com/sugardon/helm-charts/releases/download/nextjs-0.0.3/nextjs-0.0.3.tgz
+    version: 0.0.3
+  - apiVersion: v2
+    appVersion: ac627ffba67df1861a1536a4d17c7f57c9cfe7c5
     created: "2022-08-16T16:18:30.519692306Z"
     description: A Helm chart for Kubernetes
     digest: 1f6504656d7ca1bf046ffa46354064e7679468b1456924451499d56d67f51236
@@ -55,4 +65,4 @@ entries:
     urls:
     - https://github.com/sugardon/helm-charts/releases/download/nextjs-0.0.1/nextjs-0.0.1.tgz
     version: 0.0.1
-generated: "2022-08-16T16:18:30.519704306Z"
+generated: "2022-08-17T15:29:18.027782398Z"
