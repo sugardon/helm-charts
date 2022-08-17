@@ -1,0 +1,23 @@
+{{- if .Values.emissaryIngress.enabled -}}
+{{- $svcPort := .Values.service.port -}}
+apiVersion: getambassador.io/v3alpha1
+kind: Host
+metadata:
+  name: {{ include "nextjs.fullname" . }}-host
+spec:
+  hostname: {{ .Values.emissaryIngress.domain | quote }}
+  {{- if .Values.emissaryIngress.tlsSecretName }}
+  tlsSecret:
+    name: {{ .Values.emissaryIngress.tlsSecretName }}
+  {{- end }}
+
+---
+apiVersion: getambassador.io/v3alpha1
+kind: Mapping
+metadata:
+  name: {{ include "nextjs.fullname" . }}-mapping
+spec:
+  hostname: {{ .Values.emissaryIngress.domain | quote }}
+  prefix: {{ .Values.emissaryIngress.prefix | quote }}
+  service: {{ include "nextjs.fullname" . }}:{{ $svcPort }}
+{{- end }}
